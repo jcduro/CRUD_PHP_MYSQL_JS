@@ -9,10 +9,9 @@ Pequeño módulo **CRUD** desarrollado en PHP con PDO y MySQL para gestionar reg
 - [Tecnologías](#-tecnologías)
 - [Estructura del proyecto](#-estructura-del-proyecto)
 - [Base de datos](#-base-de-datos)
-- [Preview](#-preview)
 - [Instalación](#-instalación)
 - [Uso](#-uso)
-- [To‑Do](#-to-do)
+
 
 ---
 
