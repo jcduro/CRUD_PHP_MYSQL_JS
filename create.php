@@ -22,23 +22,7 @@
 require_once __DIR__ . '/conexion.php'; // AJUSTA ESTA RUTA
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Crear</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Font Awesome para iconos (si no lo tienes ya en el layout) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <!-- Font Awesome para iconos (si no lo tienes ya en el layout) -->
-  <link rel="stylesheet" href="css/crud.css"/>
-
-
-</head>
-<body>
-
-  
 <?php
 
 $errores = [];
@@ -78,7 +62,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Crear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Font Awesome para iconos (si no lo tienes ya en el layout) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <!-- Font Awesome para iconos (si no lo tienes ya en el layout) -->
+  <link rel="stylesheet" href="css/crud.css"/>
+
+
+</head>
+<body>
+
+  
 
 <div class="crud-form-wrapper">
 <div class="super-container">
