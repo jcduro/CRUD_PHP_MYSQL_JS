@@ -4,22 +4,199 @@
 
 
 
+/* ------------------------------------------------------------------------------------------------
+
+     |  ___|  __ \  |   |  _ \   _ \   
+     | |      |   | |   | |   | |   |  
+ \   | |      |   | |   | __ <  |   |  
+\___/ \____| ____/ \___/ _| \_\\___/   
+                                       
+  ___|  _ \  __ \  ____|    _ )   _ _| __ \  ____|    \     ___|  
+ |     |   | |   | __|     _ \ \   |  |   | __|     _ \  \___ \  
+ |     |   | |   | |      ( `  <   |  |   | |      ___ \       | 
+\____|\___/ ____/ _____| \___/\/ ___|____/ _____|_/    _\_____/  
+
+  https://jcduro.bexartideas.com/index.php | 2026 | JC Duro Code & Ideas
+
+------------------------------------------------------------------------------------------------ */
 
 
 
-body { background:#050816; color:#f8f9ff; font-family:Arial, Helvetica, sans-serif; }
-        .container-neon {
-            max-width: 600px; margin:40px auto; padding:20px 25px;
-            background:#0b1020; border-radius:10px;
-            box-shadow:0 0 25px rgba(0,255,255,0.25);
-            border:1px solid rgba(0,255,255,0.4);
+main {
+  flex: 1 1 auto;
+    width: 100%;
+   max-width: 400px;
+  margin: 30px auto 30px auto;
+    background-color: #0c243cdd;
+ border-radius: 12px;
+  border: 2px solid var(--glass-border);
+  box-shadow: 0 0 44px #53e7ff38;
+padding: 25px 30px;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+    text-align: center;
+}
+
+
+
+
+.container-neon1 {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px 25px;
+    background: #0b1020;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+    border: 1px solid rgba(0, 255, 255, 0.4);
+}
+
+        .container-neon2 {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px 25px;
+            background: #0b1020;
+            border-radius: 10px;
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.25);
+            border: 1px solid rgba(0, 255, 255, 0.4);
         }
-        h1 { text-align:center; color:#00e5ff; text-shadow:0 0 10px #00e5ff; margin-bottom:20px; }
-        .field { margin-bottom:10px; }
-        .label { font-weight:bold; color:#00e5ff; }
-        .btn-secondary-neon {
-            background:transparent; color:#00e5ff;
-            border:1px solid #00e5ff; border-radius:4px;
-            padding:8px 14px; text-decoration:none;
+
+
+    
+
+
+h1 {
+    text-align: center;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff;
+    margin-bottom: 25px;
+}
+
+
+
+
+
+
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px 10px;
+            margin-bottom: 12px;
+            border-radius: 4px;
+            border: 1px solid rgba(0, 229, 255, 0.4);
+            background: #050816;
+            color: #f8f9ff;
         }
-        .btn-secondary-neon:hover { background:rgba(0,229,255,0.1); }
+        .btn-neon {
+            display: inline-block;
+            padding: 8px 14px;
+            font-size: 13px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 6px;
+        }
+        .btn-neon {
+            color: #050816;
+            background: #00e5ff;
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+        }
+        .btn-neon:hover {
+            background: #00bcd4;
+            box-shadow: 0 0 18px rgba(0, 229, 255, 0.9);
+                text-decoration: none;
+        }
+      
+        .btn-action {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+/* Azul neón (Editar) */
+.btn-edit {
+    color: #050816;
+    background: #00e5ff;
+    box-shadow: 0 0 10px rgba(0, 229, 255, 0.7);
+}
+.btn-edit:hover {
+    background: #00bcd4;
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.9);
+    transform: translateY(-1px);
+        text-decoration: none;
+}
+
+/* Verde neón (Ver) */
+.btn-view {
+    color: #050816;
+    background: #00ff7f;
+    box-shadow: 0 0 10px rgba(0, 255, 127, 0.7);
+}
+.btn-view:hover {
+    background: #00e676;
+    box-shadow: 0 0 18px rgba(0, 255, 127, 0.9);
+    transform: translateY(-1px);
+        text-decoration: none;
+}
+
+/* Rojo neón (Eliminar) */
+.btn-delete {
+    color: #fff;
+    background: #ff1744;
+    box-shadow: 0 0 10px rgba(255, 23, 68, 0.7);
+}
+.btn-delete:hover {
+    background: #f01440;
+    box-shadow: 0 0 18px rgba(255, 23, 68, 0.9);
+    transform: translateY(-1px);
+        text-decoration: none;
+}
+
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 8, 22, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-neon {
+    background: #0b1020;
+    border-radius: 10px;
+    padding: 20px 24px;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 0 24px rgba(255, 23, 68, 0.5);
+    border: 1px solid rgba(255, 23, 68, 0.7);
+    text-align: center;
+}
+
+.modal-neon h2 {
+    margin-bottom: 10px;
+    color: #ff5252;
+    text-shadow: 0 0 10px #ff1744;
+}
+
+.modal-neon p {
+    margin-bottom: 18px;
+    font-size: 14px;
+    color: #f8f9ff;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
