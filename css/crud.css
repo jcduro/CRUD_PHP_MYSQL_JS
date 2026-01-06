@@ -1,0 +1,25 @@
+
+
+
+
+
+
+
+
+
+body { background:#050816; color:#f8f9ff; font-family:Arial, Helvetica, sans-serif; }
+        .container-neon {
+            max-width: 600px; margin:40px auto; padding:20px 25px;
+            background:#0b1020; border-radius:10px;
+            box-shadow:0 0 25px rgba(0,255,255,0.25);
+            border:1px solid rgba(0,255,255,0.4);
+        }
+        h1 { text-align:center; color:#00e5ff; text-shadow:0 0 10px #00e5ff; margin-bottom:20px; }
+        .field { margin-bottom:10px; }
+        .label { font-weight:bold; color:#00e5ff; }
+        .btn-secondary-neon {
+            background:transparent; color:#00e5ff;
+            border:1px solid #00e5ff; border-radius:4px;
+            padding:8px 14px; text-decoration:none;
+        }
+        .btn-secondary-neon:hover { background:rgba(0,229,255,0.1); }
