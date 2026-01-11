@@ -43,14 +43,16 @@ que pueda integrarse fácilmente en otros módulos del dashboard o proyectos sim
 
 --- 
 
-## 🛠 Características
-
-- CRUD completo sobre la tabla `form_neon` (crear, listar, ver detalle, actualizar y eliminar).
-- Interfaz con botones de acciones en verde, azul y rojo neón para Ver, Editar y Eliminar.
-- Modal de confirmación para la eliminación de registros, evitando borrados accidentales.[web:63][web:69]
-- Validación básica del formulario (campos obligatorios en alta y edición).
-- Integración con plantillas globales del dashboard (`header`, `menu`, `footer`).
-- Código organizado por responsabilidades: conexión, listado, create, read, update y delete.
+## 📦 Características
+| ✅ | Descripción |
+|---|---|
+| 🎨 | Diseño **neon azul** con sombras y bordes luminosos |
+| 📱 | Totalmente **responsive** |
+| 🔄 | Envío **AJAX** (sin recargar página) |
+| 🌍 | Selector dinámico de **país → ciudad** |
+| 🛡️ | Prevención de **SQL-injection** con PDO y prepared statements |
+| 📋 | Listado **en tiempo real** tras cada registro |
+| ⚡ | Código **limpio y comentado** |
 
 --- 
 
