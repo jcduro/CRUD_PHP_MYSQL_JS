@@ -157,6 +157,71 @@ h1 {
 }
 
 
+
+
+/* ---------- Listado Neon ---------- */
+/* ---------- Listado Neon ---------- */
+.listado-neon{
+  width:100%;
+  max-width:900px;
+  margin:50px auto 30px;
+  padding:20px;
+  border:1px solid var(--landing-neon);
+  border-radius:15px;
+  box-shadow:0 0 20px var(--landing-neon),inset 0 0 10px var(--landing-neon);
+  background:rgba(0,0,0,.85);
+}
+.listado-neon h3{
+  text-align:center;
+  color:var(--landing-neon);
+  text-shadow:0 0 8px var(--landing-neon);
+  margin-bottom:15px;
+}
+.vacio{
+  text-align:center;
+  color:#888;
+}
+.tabla-cont{overflow-x:auto}          /* responsivo básico escritorio */
+.neon-table{
+  width:100%;
+  border-collapse:collapse;
+  font-size:.95rem;
+  color:var(--white-white);
+}
+.neon-table th,
+.neon-table td{
+  padding:8px 10px;
+  border:1px solid var(--landing-neon);
+  text-align:center;
+}
+.neon-table th{
+  background:#00aabb22;
+  color: var(--landing-neon);
+  text-shadow:0 0 5px var(--landing-neon);
+}
+.neon-table tr:nth-child(even){background:#111}
+.neon-table tr:hover{background:#003333}
+
+.flash-ok{
+  background:#00f3ff22;
+  color: var(--landing-neon);
+  text-align:center;
+  padding:8px;
+  margin-bottom:15px;
+  border:1px solid var(--landing-neon);
+  border-radius:5px;
+  text-shadow:0 0 5px var(--landing-neon);
+}
+
+
+/* BASE: >=1301px (escritorio grande) */
+/* aquí va tu CSS base sin @media:
+   .listado-neon, .neon-table, th, td, etc.
+*/
+
+
+
+
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -195,3 +260,137 @@ h1 {
     justify-content: center;
     gap: 8px;
 }
+
+
+
+
+
+/* 1300px – 1000px: portátiles medianos/grandes */
+@media (max-width: 1300px) and (min-width: 1000px){
+  .listado-neon{
+    max-width: 95%;
+    margin:30px auto 20px;
+    padding:14px;
+  }
+
+  .neon-table{
+    table-layout:fixed;    /* distribuye columnas más parejo */
+    font-size:0.8rem;      /* texto más pequeño */
+  }
+
+  .neon-table th,
+  .neon-table td{
+    padding:4px 6px;
+    white-space:normal;    /* deja que el texto salte de línea */
+    word-wrap:break-word;  /* rompe palabras largas (correos, teléfonos) */
+  }
+
+  /* Columna de acciones más estrecha */
+  .neon-table th[colspan],
+  .neon-table td:nth-last-child(-n+3){
+    font-size:0.75rem;
+  }
+
+  .btn-action{
+    font-size:0.7rem;
+    padding:3px 6px;
+  }
+}
+
+/* 925px – 770px: tablet (se mantiene tabla horizontal, pero muy compacta) */
+@media (max-width: 990px) and (min-width: 770px){
+  .listado-neon{
+    max-width: 100%;
+    margin:25px auto 15px;
+    padding:12px;
+  }
+
+  .neon-table{
+    table-layout:fixed;       /* reparte ancho de columnas */
+    font-size:0.75rem;        /* texto más pequeño */
+  }
+
+  .neon-table th,
+  .neon-table td{
+    padding:4px 4px;
+    white-space:normal;       /* permite salto de línea */
+    word-wrap:break-word;     /* rompe palabras largas (correos, etc.) */
+  }
+
+  /* Si quieres estrechar un poco columnas específicas:
+     por ejemplo ID y País/Ciudad */
+  .neon-table th:nth-child(1),
+  .neon-table td:nth-child(1){
+    width:40px;
+  }
+  .neon-table th:nth-child(5),
+  .neon-table td:nth-child(5),
+  .neon-table th:nth-child(6),
+  .neon-table td:nth-child(6){
+    width:70px;
+  }
+
+  .btn-action{
+    font-size:0.7rem;
+    padding:2px 4px;
+  }
+}
+
+
+/* <= 767px: móvil en cards */
+@media (max-width: 767px){
+  .tabla-cont{
+    overflow-x:visible;
+  }
+
+  .neon-table,
+  .neon-table thead,
+  .neon-table tbody,
+  .neon-table th,
+  .neon-table td,
+  .neon-table tr{
+    display:block;
+  }
+
+  .neon-table thead{
+    display:none;
+  }
+
+  .neon-table tr{
+    margin-bottom:15px;
+    border:1px solid var(--landing-neon);
+    border-radius:10px;
+    box-shadow:0 0 12px var(--landing-neon);
+    background:#050505;
+  }
+
+  .neon-table td{
+    border:none;
+    border-bottom:1px solid #222;
+    text-align:left;
+    padding:8px 12px;
+    position:relative;
+    padding-left:110px;
+    font-size:0.85rem;
+  }
+
+  .neon-table td:last-child{
+    border-bottom:none;
+  }
+
+  .neon-table td::before{
+    content:attr(data-label);
+    position:absolute;
+    left:10px;
+    top:50%;
+    transform:translateY(-50%);
+    font-weight:bold;
+    color:var(--landing-neon);
+    text-shadow:0 0 4px var(--landing-neon);
+    font-size:0.7rem;
+  }
+}
+
+
+
+
